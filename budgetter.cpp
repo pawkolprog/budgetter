@@ -4,23 +4,31 @@ int Budgetter::getLoggedInUserId(){
     return userManager.getLoggedInUserId();
 }
 
-/*
-
-void AdressBook::rejestracjaUzytkownika() {
-    uzytkownikMenedzer.rejestracjaUzytkownika();
+void Budgetter::userRegistration(){
+    userManager.userRegistration();
 }
 
-void AdressBook::wypiszWszystkichUzytkownikow() {
-    uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
-}
-
-void AdressBook::zalogujUzytkownika() {
-    if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() == 0){
-        if (uzytkownikMenedzer.logowanieUzytkownika()){
-            adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+void Budgetter::userLogin(){
+    if (userManager.getLoggedInUserId() == 0){
+        if (userManager.userLogin()){
+            //adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
         }
     }
 }
+
+void Budgetter::changePasswordLoggedInUser(){
+    userManager.changePasswordLoggedInUser();
+}
+
+void Budgetter::userLogout(){
+    if (userManager.getLoggedInUserId() != 0){
+        userManager.userLogout();
+        //delete adresatMenedzer;
+        //adresatMenedzer = NULL;
+    }
+}
+
+/*
 
 void AdressBook::dodajAdresata(){
     if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() != 0){

@@ -58,9 +58,12 @@ int main()
             switch (choice)
             {
             case '1':
-                //ksiazkaAdresowa.rejestracjaUzytkownika();
+                budgetter.userRegistration();
                 break;
             case '2':
+                budgetter.outputAllUsers();
+                system("pause");
+                budgetter.userLogin();
                 //ksiazkaAdresowa.zalogujUzytkownika();
                 break;
             case '9':
@@ -94,10 +97,10 @@ int main()
                 //ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-                //ksiazkaAdresowa.edytujAdresata();
+                budgetter.changePasswordLoggedInUser();
                 break;
             case '7':
-                //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                budgetter.userLogout();
                 break;
             default:
                 cout << endl << "There is no such option in menu." << endl << endl;

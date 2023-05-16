@@ -26,6 +26,14 @@ public:
     */
     }
     int getLoggedInUserId();
+    void userRegistration();
+    void userLogin();
+    void changePasswordLoggedInUser();
+    void userLogout();
+
+    void outputAllUsers(){
+        userManager.outputAllUsers();
+    }
 
 
 };

@@ -16,7 +16,11 @@ using namespace std;
 class FileWithUsers :public TextFile {
     public:
     FileWithUsers(string fileName) : TextFile(fileName) {}
+    void addUserToFile(User user);
+    vector <User> loadUsers();
+    void changeUserPassword(string newPassword, string loggedUserId);
 };
+
     /*
 class FileWithUsers :public TextFile {
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);

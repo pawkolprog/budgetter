@@ -18,15 +18,23 @@ class UserManager {
     vector <User> users;
     FileWithUsers fileWithUsers;
 
-    //int pobierzIdNowegoUzytkownika();
-    //bool czyIstniejeLogin(string login);
+    User enterDataOfNewUser();
+    int getNewUserId();
+    bool isLoginExist(string login);
+    void loadUsers();
 
 public:
     UserManager(string fileWithUsersName) : fileWithUsers(fileWithUsersName) {
     loggedUserId = 0;
-    //wczytajUzytkownikow();
+    loadUsers();
 }
     int getLoggedInUserId();
+    void userRegistration();
+    bool userLogin();
+    void changePasswordLoggedInUser();
+    void userLogout();
+
+    void outputAllUsers();
 
 /*
 public:
