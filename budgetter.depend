@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1684230059 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\expense.cpp
+
+1684230394 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\filewithexpenses.cpp
+
+1684230360 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\filewithincomes.cpp
+
+1684235443 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\filewithusers.cpp
+	"fileWithUsers.h"
+
+1684242293 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\filewithusers.h
+	<iostream>
+	<vector>
+	<windows.h>
+	"Markup.h"
+	"user.h"
+	"auxiliaryMethods.h"
+	"textFile.h"
+
+1303067212 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1684239641 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\user.h
+	<iostream>
+
+1684231875 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\auxiliarymethods.h
+	<iostream>
+	<sstream>
+	<algorithm>
+
+1684239164 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\textfile.h
+	<iostream>
+	"Markup.h"
+
+1684230036 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\income.cpp
+
+1303067212 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+1684240616 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\auxiliarymethods.cpp
+	"auxiliaryMethods.h"
+
+1684229885 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.cpp
+
+1684239164 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\textfile.cpp
+	"textFile.h"
+
+1684239641 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\user.cpp
+	"user.h"
+
+1684240524 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\budgetter.cpp
+	"budgetter.h"
+
+1684242041 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\budgetter.h
+	<iostream>
+	"userManager.h"
+
+1684242466 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\usermanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"user.h"
+	"fileWithUsers.h"
+	"auxiliaryMethods.h"
+
+1684242318 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\main.cpp
+	<iostream>
+	"budgetter.h"
+	"auxiliaryMethods.h"
+
+1684242430 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\usermanager.cpp
+	"userManager.h"
+
