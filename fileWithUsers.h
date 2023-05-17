@@ -21,17 +21,4 @@ class FileWithUsers :public TextFile {
     void changeUserPassword(string newPassword, string loggedUserId);
 };
 
-    /*
-class FileWithUsers :public TextFile {
-    string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
-    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-
-public:
-    PlikZUzytkownikami(string nazwaPliku) : PlikTekstowy(nazwaPliku) {}
-    void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
-    vector <Uzytkownik> wczytajUzytkownikowZPliku();
-    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
-};
-*/
-
 #endif

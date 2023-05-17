@@ -4,33 +4,36 @@
 #include <iostream>
 
 #include "userManager.h"
+#include "operationManager.h"
 
 using namespace std;
 
 class Budgetter {
     UserManager userManager;
-    //AdresatMenedzer *adresatMenedzer;
+    OperationManager *operationManager;
     const string FILE_WITH_INCOMES_NAME;
     const string FILE_WITH_EXPENSES_NAME;
 
 public:
     Budgetter(string fileWithIncomesName, string fileWithExpensesName, string fileWithUsersName) : userManager(fileWithUsersName), FILE_WITH_INCOMES_NAME(fileWithIncomesName), FILE_WITH_EXPENSES_NAME(fileWithExpensesName)
     {
-    /*
-    adresatMenedzer = NULL;
+        operationManager = NULL;
     }
-    ~AdressBook(){
-        delete adresatMenedzer;
-        adresatMenedzer = NULL;
+    ~Budgetter(){
+        delete operationManager;
+        operationManager = NULL;
     }
-    */
-    }
+
     int getLoggedInUserId();
     void userRegistration();
     void userLogin();
     void changePasswordLoggedInUser();
     void userLogout();
+    void addIncome();
 
+    void outputAllIncomes(){
+        operationManager -> outputAllIncomes();
+    }
     void outputAllUsers(){
         userManager.outputAllUsers();
     }

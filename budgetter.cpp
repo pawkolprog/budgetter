@@ -12,6 +12,7 @@ void Budgetter::userLogin(){
     if (userManager.getLoggedInUserId() == 0){
         if (userManager.userLogin()){
             //adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+            operationManager = new OperationManager(FILE_WITH_INCOMES_NAME, /*FILE_WITH_EXPENSES_NAME,*/ userManager.getLoggedInUserId());
         }
     }
 }
@@ -23,9 +24,13 @@ void Budgetter::changePasswordLoggedInUser(){
 void Budgetter::userLogout(){
     if (userManager.getLoggedInUserId() != 0){
         userManager.userLogout();
-        //delete adresatMenedzer;
-        //adresatMenedzer = NULL;
+        delete operationManager;
+        operationManager = NULL;
     }
+}
+
+void Budgetter::addIncome(){
+    operationManager -> addIncome();
 }
 
 /*

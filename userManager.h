@@ -35,22 +35,6 @@ public:
     void userLogout();
 
     void outputAllUsers();
-
-/*
-public:
-    UserManager(string fileWithUsersName) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {
-    idZalogowanegoUzytkownika = 0;
-    wczytajUzytkownikow();
-}
-    void rejestracjaUzytkownika();
-    void wypiszWszystkichUzytkownikow();
-    Uzytkownik podajDaneNowegoUzytkownika();
-    void wczytajUzytkownikow();
-    bool logowanieUzytkownika();
-    int pobierzIdZalogowanegoUzytkownika();
-    void zmianaHaslaZalogowanegoUzytkownika();
-    void wylogujUzytkownika();
-*/
 };
 
 

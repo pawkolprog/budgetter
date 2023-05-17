@@ -64,7 +64,6 @@ int main()
                 budgetter.outputAllUsers();
                 system("pause");
                 budgetter.userLogin();
-                //ksiazkaAdresowa.zalogujUzytkownika();
                 break;
             case '9':
                 exit(0);
@@ -82,7 +81,11 @@ int main()
             switch (choice)
             {
             case '1':
-                //ksiazkaAdresowa.dodajAdresata();
+                budgetter.addIncome();
+                budgetter.addIncome();
+                budgetter.addIncome();
+                budgetter.outputAllIncomes();
+                system("pause");
                 break;
             case '2':
                 //ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
