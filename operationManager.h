@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <windows.h>
+#include <iomanip>
 
 #include "income.h"
 #include "fileWithIncomes.h"
@@ -15,9 +16,12 @@ class OperationManager {
     const int LOGGED_USER_ID;
 
     Income enterDataOfNewIncome();
+    void sortIncomesVector();
 
 public:
     OperationManager(string fileWithIncomesName, /*string fileWithExpensesName,*/ int loggedUserId) : fileWithIncomes(fileWithIncomesName), LOGGED_USER_ID(loggedUserId) {
+    incomes = fileWithIncomes.loadLoggedInUserIncomesFromFile(LOGGED_USER_ID);
+    sortIncomesVector();
     }
     void addIncome();
 

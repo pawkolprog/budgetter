@@ -8,7 +8,7 @@ void OperationManager::addIncome(){
     income = enterDataOfNewIncome();
 
     incomes.push_back(income);
-    //plikZAdresatami.dopiszAdresataDoPliku(adresat);
+    fileWithIncomes.addIncomeToFile(income);
     cout << endl << "Income has been added." << endl << endl;
     system("pause");
 }
@@ -48,13 +48,17 @@ Income OperationManager::enterDataOfNewIncome(){
     return income;
 }
 
+void OperationManager::sortIncomesVector(){
+    sort(incomes.begin( ), incomes.end( ), [ ]( auto lhs, auto rhs ){return lhs.getDate() < rhs.getDate();});
+}
+
 void OperationManager::outputAllIncomes() {
     for (int i = 0; i < (int) incomes.size(); i++) {
         cout << incomes[i].getIncomeId() << endl;
         cout << incomes[i].getUserId() << endl;
         cout << incomes[i].getItem() << endl;
         cout << incomes[i].getDate() << endl;
-        cout << incomes[i].getAmount() << endl;
+        cout << setprecision(10) << incomes[i].getAmount() << endl;
     }
 }
 

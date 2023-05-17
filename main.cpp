@@ -82,8 +82,6 @@ int main()
             {
             case '1':
                 budgetter.addIncome();
-                budgetter.addIncome();
-                budgetter.addIncome();
                 budgetter.outputAllIncomes();
                 system("pause");
                 break;

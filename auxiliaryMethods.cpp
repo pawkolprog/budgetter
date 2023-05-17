@@ -83,7 +83,7 @@ int AuxiliaryMethods::readInteger()
     return number;
 }
 
-string changeIntDateToStringWithDashes(int intDate){
+string AuxiliaryMethods::changeIntDateToStringWithDashes(int intDate){
     string stringDate;
     stringstream ss;
 

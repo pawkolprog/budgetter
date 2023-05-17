@@ -17,6 +17,8 @@ class FileWithIncomes :public TextFile {
     lastIncomeId = 0;
     }
     int getLastIncomeId();
+    void addIncomeToFile(Income income);
+    vector <Income> loadLoggedInUserIncomesFromFile(int loggedInUserId);
 };
 
 
