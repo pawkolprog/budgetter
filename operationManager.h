@@ -17,6 +17,8 @@ class OperationManager {
 
     Income enterDataOfNewIncome();
     void sortIncomesVector();
+    void putIncomeInSortedVector(Income income);
+    void viewIncomeData(int i);
 
 public:
     OperationManager(string fileWithIncomesName, /*string fileWithExpensesName,*/ int loggedUserId) : fileWithIncomes(fileWithIncomesName), LOGGED_USER_ID(loggedUserId) {
@@ -24,35 +26,12 @@ public:
     sortIncomesVector();
     }
     void addIncome();
+    void viewCurrentMonthBalance();
+    void viewLastMonthBalance();
+    void viewBalanceForGivenDates();
 
 
     void outputAllIncomes();
 };
-
-
-
-
-
-    /*
-
-
-
-    void wyswietlDaneAdresata(Adresat adresat);
-    Adresat podajDaneNowegoAdresata();
-    char wybierzOpcjeZMenuEdycja();
-
-public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika) {
-        plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, ID_ZALOGOWANEGO_UZYTKOWNIKA);
-    }
-    void wyswietlWszystkichAdresatow();
-    void dodajAdresata();
-    void usunAdresata();
-    void edytujAdresata();
-    void wyszukajAdresatowPoImieniu();
-    void wyszukajAdresatowPoNazwisku();
-};
-
-*/
 
 #endif

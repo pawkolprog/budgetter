@@ -21,27 +21,4 @@ class FileWithIncomes :public TextFile {
     vector <Income> loadLoggedInUserIncomesFromFile(int loggedInUserId);
 };
 
-
-/*
-class PlikZAdresatami :public PlikTekstowy {
-    int idOstatniegoAdresata;
-
-    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
-    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    string pobierzLiczbe(string tekst, int pozycjaZnaku);
-
-public:
-    PlikZAdresatami(string nazwaPliku) : PlikTekstowy(nazwaPliku) {
-    idOstatniegoAdresata = 0;
-}
-    void dopiszAdresataDoPliku(Adresat adresat);
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika);
-    int pobierzIdOstatniegoAdresata();
-    void usunAdresata(int idUsuwanegoAdresata);
-    void zaktualizujDaneWybranegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
-};
-*/
-
 #endif

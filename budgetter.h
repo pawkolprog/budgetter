@@ -30,6 +30,9 @@ public:
     void changePasswordLoggedInUser();
     void userLogout();
     void addIncome();
+    void viewCurrentMonthBalance();
+    void viewLastMonthBalance();
+    void viewBalanceForGivenDates();
 
     void outputAllIncomes(){
         operationManager -> outputAllIncomes();

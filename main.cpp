@@ -89,13 +89,13 @@ int main()
                 //ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                //ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
+                budgetter.viewCurrentMonthBalance();
                 break;
             case '4':
-                //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                budgetter.viewLastMonthBalance();
                 break;
             case '5':
-                //ksiazkaAdresowa.usunAdresata();
+                budgetter.viewBalanceForGivenDates();
                 break;
             case '6':
                 budgetter.changePasswordLoggedInUser();
