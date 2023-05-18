@@ -34,15 +34,6 @@ public:
     void viewCurrentMonthBalance();
     void viewLastMonthBalance();
     void viewBalanceForGivenDates();
-
-    void outputAllIncomes(){
-        operationManager -> outputAllIncomes();
-    }
-    void outputAllUsers(){
-        userManager.outputAllUsers();
-    }
-
-
 };
 
 #endif

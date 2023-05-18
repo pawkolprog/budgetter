@@ -61,8 +61,6 @@ int main()
                 budgetter.userRegistration();
                 break;
             case '2':
-                budgetter.outputAllUsers();
-                system("pause");
                 budgetter.userLogin();
                 break;
             case '9':

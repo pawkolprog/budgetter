@@ -74,7 +74,7 @@ bool UserManager::userLogin(){
 
                 if (itr -> getPassword() == password)
                 {
-                    cout << endl << "You have logged in." << endl << endl;
+                    cout << endl << "You have logged in. Welcome " << itr -> getName() << " " << itr -> getSurname() << "." << endl << endl;
                     system("pause");
                     loggedUserId = itr -> getId();
                     return true;
@@ -110,15 +110,4 @@ void UserManager::changePasswordLoggedInUser(){
 
 void UserManager::userLogout(){
     loggedUserId = 0;
-}
-
-
-void UserManager::outputAllUsers() {
-    for (int i = 0; i < (int) users.size(); i++) {
-        cout << users[i].getId() << endl;
-        cout << users[i].getLogin() << endl;
-        cout << users[i].getPassword() << endl;
-        cout << users[i].getName() << endl;
-        cout << users[i].getSurname() << endl;
-    }
 }

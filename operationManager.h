@@ -40,9 +40,6 @@ public:
     void viewCurrentMonthBalance();
     void viewLastMonthBalance();
     void viewBalanceForGivenDates();
-
-
-    void outputAllIncomes();
 };
 
 #endif

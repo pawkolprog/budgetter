@@ -53,7 +53,7 @@
 1684337245 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\auxiliarymethods.cpp
 	"auxiliaryMethods.h"
 
-1684414752 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.cpp
+1684415053 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.cpp
 	"operationManager.h"
 
 1684239164 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\textfile.cpp
@@ -65,12 +65,12 @@
 1684411147 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\budgetter.cpp
 	"budgetter.h"
 
-1684411130 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\budgetter.h
+1684415053 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\budgetter.h
 	<iostream>
 	"userManager.h"
 	"operationManager.h"
 
-1684263397 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\usermanager.h
+1684415120 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\usermanager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -80,12 +80,12 @@
 	"fileWithUsers.h"
 	"auxiliaryMethods.h"
 
-1684413699 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\main.cpp
+1684415053 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\main.cpp
 	<iostream>
 	"budgetter.h"
 	"auxiliaryMethods.h"
 
-1684257575 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\usermanager.cpp
+1684415522 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\usermanager.cpp
 	"userManager.h"
 
 1684268598 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\income.h
@@ -100,7 +100,7 @@
 	"auxiliaryMethods.h"
 	"textFile.h"
 
-1684411131 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.h
+1684415053 c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.h
 	<iostream>
 	<vector>
 	<windows.h>

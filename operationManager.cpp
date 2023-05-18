@@ -322,13 +322,3 @@ void OperationManager::viewBalanceForGivenDates() {
     cout << endl << "Balance of transactions: " << sumOfIncomes-sumOfExpenses << endl;
     system("pause");
 }
-
-void OperationManager::outputAllIncomes() {
-    for (int i = 0; i < (int) incomes.size(); i++) {
-        cout << incomes[i].getIncomeId() << endl;
-        cout << incomes[i].getUserId() << endl;
-        cout << incomes[i].getItem() << endl;
-        cout << incomes[i].getDate() << endl;
-        cout << setprecision(10) << incomes[i].getAmount() << endl;
-    }
-}
