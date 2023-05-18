@@ -82,12 +82,9 @@ int main()
             {
             case '1':
                 budgetter.addIncome();
-                budgetter.outputAllIncomes();
-                system("pause");
                 break;
             case '2':
                 budgetter.addExpense();
-                system("pause");
                 break;
             case '3':
                 budgetter.viewCurrentMonthBalance();
