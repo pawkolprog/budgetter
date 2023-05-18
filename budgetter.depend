@@ -53,7 +53,7 @@
 1684337245 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\auxiliarymethods.cpp
 	"auxiliaryMethods.h"
 
-1684413159 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.cpp
+1684414752 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\operationmanager.cpp
 	"operationManager.h"
 
 1684239164 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\textfile.cpp
@@ -80,7 +80,7 @@
 	"fileWithUsers.h"
 	"auxiliaryMethods.h"
 
-1684411130 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\main.cpp
+1684413699 source:c:\users\user\desktop\inne\programowanie\kursgit\budgetter\main.cpp
 	<iostream>
 	"budgetter.h"
 	"auxiliaryMethods.h"

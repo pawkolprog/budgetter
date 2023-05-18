@@ -131,22 +131,23 @@ void OperationManager::putExpenseInSortedVector(Expense expense){
 void OperationManager::viewCurrentMonthBalance(){
     system("cls");
     int yearMonth, counter = 0;
-    double sumOfIncomes = 0;
+    double sumOfIncomes = 0, sumOfExpenses = 0;
 
-    if (incomes.empty()){
+    if (incomes.empty() && expenses.empty()){
         cout << endl << "No added transactions." << endl << endl;
         system("pause");
         return;
     }
     yearMonth = (AuxiliaryMethods::getCurrentDateInt()) / 100;
     yearMonth *= 100;
+    cout << "         >>> CURRENT MONTH BALANCE <<<" << endl;
+    cout << "-----------------------------------------------" << endl;
+    cout << "DATE         AMOUNT                  ITEM" << endl;
 
     for (int i = 0; i < (int) incomes.size(); i++){
         if (incomes[i].getDate() > yearMonth){
             if (counter == 0){
-                cout << "               >>> INCOMES <<<" << endl;
-                cout << "-----------------------------------------------" << endl;
-                cout << "DATE         AMOUNT                  ITEM" << endl;
+                cout << "                                                      INCOMES:" << endl;
             }
             viewIncomeData(i);
             sumOfIncomes += incomes[i].getAmount();
@@ -155,12 +156,29 @@ void OperationManager::viewCurrentMonthBalance(){
     }
     if (counter == 0) {
         cout << "No added transactions this month.";
-        system("pause");
     } else {
         cout << endl << "Number of found transactions: " << counter;
         cout << ". Sum of transactions: " << setprecision(15) << sumOfIncomes << endl;
-        system("pause");
     }
+    counter = 0;
+    for (int i = 0; i < (int) expenses.size(); i++){
+        if (expenses[i].getDate() > yearMonth){
+            if (counter == 0){
+                cout << "                                                      EXPENSES:" << endl;
+            }
+            viewExpenseData(i);
+            sumOfExpenses += expenses[i].getAmount();
+            counter++;
+        }
+    }
+    if (counter == 0) {
+        cout << "No added transactions this month.";
+    } else {
+        cout << endl << "Number of found transactions: " << counter;
+        cout << ". Sum of transactions: " << setprecision(15) << sumOfExpenses << endl;
+    }
+    cout << endl << "Balance of transactions: " << sumOfIncomes-sumOfExpenses << endl;
+    system("pause");
 }
 
 void OperationManager::viewIncomeData(int i)
@@ -232,7 +250,7 @@ void OperationManager::viewLastMonthBalance(){
         cout << endl << "Number of found expenses: " << counter;
         cout << ". Sum of expenses: " << setprecision(15) << sumOfExpenses << endl;
     }
-    cout << endl << "Balance of trasactions: " << sumOfIncomes-sumOfExpenses << endl;
+    cout << endl << "Balance of transactions: " << sumOfIncomes-sumOfExpenses << endl;
     system("pause");
 }
 
@@ -240,9 +258,9 @@ void OperationManager::viewBalanceForGivenDates() {
     system("cls");
     int minIntDate, maxIntDate, counter = 0;
     string minStringDate, maxStringDate;
-    double sumOfIncomes = 0;
+    double sumOfIncomes = 0, sumOfExpenses = 0;
 
-    if (incomes.empty()) {
+    if (incomes.empty() && expenses.empty()) {
         cout << endl << "No added transactions." << endl << endl;
         system("pause");
         return;
@@ -264,12 +282,14 @@ void OperationManager::viewBalanceForGivenDates() {
     }
     maxIntDate = AuxiliaryMethods::changeStringWithDashesDateToInt(maxStringDate);
 
+    cout << " >>> BALANCE FROM " << minStringDate << " TO " << maxStringDate << " <<<" << endl;
+    cout << "-----------------------------------------------" << endl;
+    cout << "DATE         AMOUNT                  ITEM" << endl;
+
     for (int i = 0; i < (int) incomes.size(); i++) {
         if (incomes[i].getDate() >= minIntDate && incomes[i].getDate() <= maxIntDate) {
             if (counter == 0) {
-                cout << " >>> BALANCE FROM " << minStringDate << " TO " << maxStringDate << " <<<" << endl;
-                cout << "-----------------------------------------------" << endl;
-                cout << "DATE         AMOUNT                  ITEM" << endl;
+                cout << "                                                      INCOMES:" << endl;
             }
             viewIncomeData(i);
             sumOfIncomes += incomes[i].getAmount();
@@ -278,12 +298,29 @@ void OperationManager::viewBalanceForGivenDates() {
     }
     if (counter == 0) {
         cout << "No added transactions between given dates." << endl;
-        system("pause");
     } else {
         cout << endl << "Number of found transactions: " << counter;
         cout << ". Sum of transactions: " << setprecision(15) << sumOfIncomes << endl;
-        system("pause");
     }
+    counter = 0;
+    for (int i = 0; i < (int) expenses.size(); i++) {
+        if (expenses[i].getDate() >= minIntDate && expenses[i].getDate() <= maxIntDate) {
+            if (counter == 0) {
+                cout << "                                                      EXPENSES:" << endl;
+            }
+            viewExpenseData(i);
+            sumOfExpenses += expenses[i].getAmount();
+            counter++;
+        }
+    }
+    if (counter == 0) {
+        cout << "No added transactions between given dates." << endl;
+    } else {
+        cout << endl << "Number of found transactions: " << counter;
+        cout << ". Sum of transactions: " << setprecision(15) << sumOfExpenses << endl;
+    }
+    cout << endl << "Balance of transactions: " << sumOfIncomes-sumOfExpenses << endl;
+    system("pause");
 }
 
 void OperationManager::outputAllIncomes() {
