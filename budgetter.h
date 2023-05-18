@@ -30,6 +30,7 @@ public:
     void changePasswordLoggedInUser();
     void userLogout();
     void addIncome();
+    void addExpense();
     void viewCurrentMonthBalance();
     void viewLastMonthBalance();
     void viewBalanceForGivenDates();

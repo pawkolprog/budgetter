@@ -86,7 +86,8 @@ int main()
                 system("pause");
                 break;
             case '2':
-                //ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
+                budgetter.addExpense();
+                system("pause");
                 break;
             case '3':
                 budgetter.viewCurrentMonthBalance();

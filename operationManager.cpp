@@ -64,6 +64,70 @@ void OperationManager::putIncomeInSortedVector(Income income){
     }
 }
 
+void OperationManager::addExpense(){
+    Expense expense;
+
+    system("cls");
+    cout << " >>> ADD NEW EXPENSE <<<" << endl << endl;
+    expense = enterDataOfNewExpense();
+    putExpenseInSortedVector(expense);
+    fileWithExpenses.addExpenseToFile(expense);
+    cout << endl << "Expense has been added." << endl << endl;
+    system("pause");
+}
+
+Expense OperationManager::enterDataOfNewExpense(){
+    Expense expense;
+    char choice;
+    string manualDate, stringAmount;
+
+    expense.setExpenseId(fileWithExpenses.getLastExpenseId() + 1);
+    expense.setUserId(LOGGED_USER_ID);
+
+    cout << "Enter the transaction title: ";
+    expense.setItem(AuxiliaryMethods::readLine());
+
+    cout << "Was it today? <y/n>: ";
+    choice = AuxiliaryMethods::readCharYorN();
+    if (choice == 'y') expense.setDate(AuxiliaryMethods::getCurrentDateInt());
+    else {
+        cout << "Enter date from 2000-01-01 to last day of current month (yyyy-mm-dd): ";
+        manualDate = AuxiliaryMethods::readLine();
+        while(!AuxiliaryMethods::checkStringWithDashesDate(manualDate)) {
+            cout << "Wrong date. Try again (yyyy-mm-dd): ";
+            manualDate = AuxiliaryMethods::readLine();
+        }
+        expense.setDate(AuxiliaryMethods::changeStringWithDashesDateToInt(manualDate));
+    }
+
+    cout << "Enter amount of the transaction: ";
+    stringAmount = AuxiliaryMethods::readLine();
+    while(!AuxiliaryMethods::checkStringAmount(stringAmount)){
+        cout << "It is not valid number. Try again: ";
+        stringAmount = AuxiliaryMethods::readLine();
+    }
+    expense.setAmount(AuxiliaryMethods::stringAmountToDouble(stringAmount));
+
+    return expense;
+}
+
+void OperationManager::sortExpensesVector(){
+    sort(expenses.begin( ), expenses.end( ), [ ]( auto lhs, auto rhs ){return lhs.getDate() < rhs.getDate();});
+}
+
+void OperationManager::putExpenseInSortedVector(Expense expense){
+    if (expenses.empty()) expenses.push_back(expense);
+    else {
+        for (vector <Expense>::iterator it = expenses.end(); it != expenses.begin(); --it){
+            if (expense.getDate() >= (it - 1) -> getDate()){
+                expenses.emplace(it, expense);
+                return;
+            }
+        }
+        expenses.emplace(expenses.begin(), expense);
+    }
+}
+
 void OperationManager::viewCurrentMonthBalance(){
     system("cls");
     int yearMonth, counter = 0;
